@@ -20,7 +20,6 @@
         var minute = date.getMinutes();
         var second = date.getSeconds();
 
-        // Menambahkan 0 di depan angka tunggal
         day = (day < 10) ? "0" + day : day;
         hour = (hour < 10) ? "0" + hour : hour;
         minute = (minute < 10) ? "0" + minute : minute;
@@ -30,7 +29,6 @@
         document.getElementById("current-datetime").innerHTML = dateTimeString;
     }
 
-    // Memanggil fungsi displayDateTime setiap detik
     setInterval(displayDateTime, 1000);
 </script>
 
@@ -41,9 +39,9 @@
     </p>
     <p style="text-align: center;">
         <p1>
-            Muhammad Rahmadani</p1>
+        </p1>
         <span>/
-            <p2>211011401955</p2>
+            <p2></p2>
         </span>
     </p>
     <table border="1">
@@ -54,38 +52,6 @@
             <th>Jumlah Seri (S)</th>
             <th>Jumlah Kalah (K)</th>
             <th>Jumlah Poin</th>
-        </tr>
-        <tr>
-            <td>Korea Selatan U-23</td>
-            <td>3</td>
-            <td>3</td>
-            <td>0</td>
-            <td>0</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>Jepang U-23</td>
-            <td>3</td>
-            <td>2</td>
-            <td>0</td>
-            <td>1</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>Tiongkok U-23</td>
-            <td>3</td>
-            <td>1</td>
-            <td>0</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>Tiongkok U-23</td>
-            <td>3</td>
-            <td>0</td>
-            <td>0</td>
-            <td>3</td>
-            <td>0</td>
         </tr>
     </table>
 </body>

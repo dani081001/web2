@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasemen Piala Asia U-23 Qatar Group B</title>
+</head>
+
+<script>
+    function displayDateTime() {
+        var months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+        var days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+
+        var date = new Date();
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+
+        // Menambahkan 0 di depan angka tunggal
+        day = (day < 10) ? "0" + day : day;
+        hour = (hour < 10) ? "0" + hour : hour;
+        minute = (minute < 10) ? "0" + minute : minute;
+        second = (second < 10) ? "0" + second : second;
+
+        var dateTimeString = day + " " + months[monthIndex] + " " + year + " " + hour + ":" + minute + ":" + second;
+        document.getElementById("current-datetime").innerHTML = dateTimeString;
+    }
+
+    // Memanggil fungsi displayDateTime setiap detik
+    setInterval(displayDateTime, 1000);
+</script>
+
+<body>
+    <p style="text-align: center;">Data Group B Piala Asia U-23</p>
+    <p style="text-align: center;">Per
+        <span id="current-datetime"></span>
+    </p>
+    <p style="text-align: center;">
+        <p1>
+            Muhammad Rahmadani</p1>
+        <span>/
+            <p2>211011401955</p2>
+        </span>
+    </p>
+    <table border="1">
+        <tr>
+            <th>Nama Negara</th>
+            <th>Jumlah Pertandingan (P)</th>
+            <th>Jumlah Menang (M)</th>
+            <th>Jumlah Seri (S)</th>
+            <th>Jumlah Kalah (K)</th>
+            <th>Jumlah Poin</th>
+        </tr>
+        <tr>
+            <td>Korea Selatan U-23</td>
+            <td>3</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Jepang U-23</td>
+            <td>3</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Tiongkok U-23</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Tiongkok U-23</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>0</td>
+        </tr>
+    </table>
+</body>
+
+</html>

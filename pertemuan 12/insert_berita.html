@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tambah Berita</title>
+</head>
+
+<body>
+    <h1>Tambah Berita</h1>
+    <form action="insert_berita.php" method="post">
+        <label for="idKategori">Kategori:</label>
+        <select id="idKategori" name="idKategori">
+            <!-- Options will be populated from the database -->
+            <?php
+            $conn = new mysqli("localhost", "root", "", "dbBerita");
+            $result = $conn->query("SELECT * FROM tblKategori");
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['idKategori'] . "'>" . $row['nama_kategori'] . "</option>";
+            }
+            $conn->close();
+            ?>
+        </select><br>
+
+        <label for="judulBerita">Judul Berita:</label>
+        <input type="text" id="judulBerita" name="judulBerita" required><br>
+
+        <label for="isiBerita">Isi Berita:</label>
+        <textarea id="isiBerita" name="isiBerita" required></textarea><br>
+
+        <label for="penulis">Penulis:</label>
+        <input type="text" id="penulis" name="penulis" required><br>
+
+        <label for="tglDipublish">Tanggal Publish:</label>
+        <input type="date" id="tglDipublish" name="tglDipublish" required><br>
+
+        <input type="submit" value="Simpan">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF To JSON</title>
+</head>
+
+<body>
+
+    <form name="form1" enctype="multipart/form-data" method="post" action="pdf-to-json.php">
+        <p>
+            <h1>Konversi PDF ke JSON by PHP</h1>
+        </p>
+        <p>Sebagai pengganti nilai kehadiran</p>
+        <p>
+            <label>Masukkan File (*.pdf)</label>
+            <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
+            <input type="file" name="file" />
+        </p>
+        <input type="submit" name="submit" value="Proceed" />
+    </form>
+
+</body>
+
+</html>
